@@ -1,6 +1,5 @@
-NIEVA SQL-Mini-Bootcamp.
+# NIEVA SQL-Mini-Bootcamp.
 
----
 __En este ejercicio de semana 1 es practicar las siguientes acciones de SQL.__
 
 
@@ -18,5 +17,5 @@ __En este ejercicio de semana 1 es practicar las siguientes acciones de SQL.__
 * Limitar resultados: LIMIT número;
 * Valores únicos: DISTINCT
 
-__Y como entregable el archivo entrega-semana1.sql con las instrucciones SQL para crear la tabla ***'peliculas'*** 
+__Y como entregable el archivo ***'entrega-semana1.sql'*** con las instrucciones SQL para crear la tabla ***'peliculas'*** 
 en la base de datos ***'streamflix'*** con algunos queries de práctica.__
