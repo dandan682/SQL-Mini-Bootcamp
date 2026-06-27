@@ -148,5 +148,27 @@ WHERE destacada = TRUE
   AND calificacion > 8.5
 ORDER BY calificacion DESC;
 
+-- DECISIONES DE DISEÑO
+-- ======================================
+--
+-- 1. ¿Por qué DECIMAL(3,1) para rating en vez de FLOAT?
+--    El FLOAT es mejor para datos científicos o de ingeniería que usualmente son valores muy grandes o muy pequeños 
+--    y FLOAT se prefiere para evitar error por redondeo. DECIMAL es para numeros de dígitos exactos con precisión
+--    absoluta.
+--
+-- 2. ¿Por qué VARCHAR(200) para title en vez de TEXT?
+--    VARCHAR es más eficiente de manejar en caso de búsquedas, ordenar o filtrar y para cuando el límite es predecible. 
+--    TEXT es más para contenido libre, sin un límite predecible.
+--
+-- 3. ¿Qué ventaja tiene AUTO_INCREMENT en id?
+--    El motor de la base de datos genera los números de forma secuencial, no hay que calcular manualmente y se garantiza
+--    que no se dupliquen y para 
+--
+-- 4. Si tuvieras que agregar rental_price, ¿qué tipo usarías?
+--    DECIMAL porque es para valores de precisión absoluta como dinero, calificaciones, porcentajes fijos.
+--
+-- 5. ¿Qué fue lo que más te sorprendió esta semana?
+--    Por ejemplo saber que existe AUTO_INCREMENT que es como un contador automático y que puede evitar conflictos de concurrencia.
+--    O que hay que elegir el tipo de dato correcto.
 
      
