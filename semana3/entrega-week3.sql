@@ -344,8 +344,9 @@ SELECT name FROM users WHERE id = 1;  -- Alice sigue ahí
 
 SELECT COUNT(*) FROM books;
 
--- Bonus
+-- BONUS
 
+-- Tabla de reseñas
 CREATE TABLE reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -358,6 +359,14 @@ CREATE TABLE reviews (
     FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE,
     UNIQUE (user_id, book_id)   -- un usuario reseña un libro una sola vez
 );
+INSERT INTO reviews
+    (user_id, book_id, rating, comment)
+VALUES
+    (1, 1, 4, 'Calificación: Muy bueno'),    
+    (2, 3, 5, 'Evaluación: Excelente'),    
+    (3, 5, 3, 'Opinión: Regular'),  
+    (4, 9, 1, 'Muy ñoño: Malo');
+SELECT * FROM reviews;
 
 -- Trigger de auditoría de precios
 CREATE TABLE price_audit (
@@ -380,6 +389,8 @@ BEGIN
 END$$
 DELIMITER ;
 
+UPDATE books SET price = 18.55 WHERE isbn = '978-0307474728'; 
+UPDATE books SET price = 17.50 WHERE isbn = '978-0142437247'; 
+UPDATE books SET price = 25.99 WHERE isbn = '978-0439708180';
 
-
-    
+SELECT * FROM price_audit;
