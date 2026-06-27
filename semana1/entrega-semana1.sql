@@ -169,6 +169,6 @@ ORDER BY calificacion DESC;
 --
 -- 5. ¿Qué fue lo que más te sorprendió esta semana?
 --    Por ejemplo saber que existe AUTO_INCREMENT que es como un contador automático y que puede evitar conflictos de concurrencia.
---    O que hay que elegir el tipo de dato correcto.
+--    O que hay que elegir el tipo de dato correcto para optimizar espacio en disco y evitar errores matemáticos invisibles.
 
      
