@@ -366,6 +366,15 @@ VALUES
     (2, 3, 5, 'Evaluación: Excelente'),    
     (3, 5, 3, 'Opinión: Regular'),  
     (4, 9, 1, 'Muy ñoño: Malo');
+
+-- Validar UNIQUE
+-- VALIDADO -- ✔
+-- INSERT INTO reviews
+--    (user_id, book_id, rating, comment)
+-- VALUES
+--    (1, 1, 4, 'Calificación: Más muy bueno'); 
+-- VALIDADO -- ✔
+
 SELECT * FROM reviews;
 
 -- Trigger de auditoría de precios
@@ -389,6 +398,7 @@ BEGIN
 END$$
 DELIMITER ;
 
+-- Update precios
 UPDATE books SET price = 18.55 WHERE isbn = '978-0307474728'; 
 UPDATE books SET price = 17.50 WHERE isbn = '978-0142437247'; 
 UPDATE books SET price = 25.99 WHERE isbn = '978-0439708180';
